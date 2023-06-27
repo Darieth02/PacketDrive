@@ -1,0 +1,39 @@
+.MainPage{
+    background-color: whitesmoke;
+    height: 700px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.div-signin{
+    width: 700px;
+}
+
+.corusel{
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    width: auto;
+    height: 430px;
+    
+
+}
+
+.corusel img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 8;
+    transition: .5s ease;
+    border-radius: 1x;
+
+
+}
+
+.corusel img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
