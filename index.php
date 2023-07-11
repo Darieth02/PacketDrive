@@ -7,7 +7,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="/PacketDrive/app/assets/css/register.css" />
+  <link rel="stylesheet" href="app/assets/css/register.css" />
 
   <!-- Bootstrap CSS v5.2.1 -->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">

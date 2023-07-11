@@ -1,0 +1,8 @@
+version: "3"
+services:
+  web:
+    image: packetdrive:1.0
+    ports:
+      - 3000:80
+    volumes:
+      - ./PacketDrive:/var/www/
