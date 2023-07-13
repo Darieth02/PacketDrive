@@ -28,30 +28,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú Lateral</title>
+  <link rel="stylesheet" href="../../assets/css/cliente.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    .sidebar {
-      background-color: #f8f9fa;
-      height: 100vh;
-    }
-    .sidebar a {
-      display: block;
-      padding: 10px;
-      text-decoration: none;
-    }
-    .sidebar a:hover {
-      background-color: #e9ecef;
-    }
-    .active {
-      background-color: #e9ecef;
-    }
-    .content {
-      padding: 20px;
-    }
-  </style>
+  
 </head>
 <body>
   <div class="container-fluid">
@@ -59,7 +38,7 @@
       <div class="col-sm-3 sidebar">
         <h2>Menú</h2>
         <a href="#" class="active">Información</a>
-        <a href="#">Nuevo Envío</a>
+        <a href="newenvio.php">Nuevo Envío</a>
         <a href="#">Ver Envíos</a>
         <a href="#">Historial de Envíos</a>
       </div>
