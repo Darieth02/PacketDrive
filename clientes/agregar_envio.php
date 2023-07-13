@@ -2,7 +2,7 @@
 
 session_start();
 
-require '../conexion.php';
+require '../php/conexion.php';
 $conexion=conectar();
 
 $remitente=$conexion->real_escape_string($_POST['remitente']);

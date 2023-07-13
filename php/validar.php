@@ -1,5 +1,5 @@
 <?php
-include '../app/config/conexion.php';
+include 'conexion.php';
 $conexion = conectar();
 
 

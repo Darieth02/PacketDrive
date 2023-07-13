@@ -95,7 +95,7 @@ $('#iniciar').click(function (event) {
                         //location.href = '/ForceDragon/app/config/productos/producto.php';
                     } else {
                         swal("Correcto", "Usuario ingresado", "success");
-                        location.href = '/PacketDrive/app/config/clientes/interfazcliente.php';
+                        location.href = 'clientes/interfazcliente.php';
                     }
 
                 } else {

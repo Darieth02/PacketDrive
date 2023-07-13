@@ -3,7 +3,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 	//conexión a la BD
- 	include '../app/config/conexion.php';
+ 	include 'conexion.php';
 	$conexion=conectar();
 	session_start();
 	//Pasamos los datos desde el controlador a variables PHP

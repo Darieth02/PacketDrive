@@ -1,6 +1,6 @@
 <?php
 
-    require '../conexion.php';
+    require '../php/conexion.php';
     $conexion=conectar();
 
 
@@ -28,7 +28,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú Lateral</title>
-  <link rel="stylesheet" href="../../assets/css/cliente.css">
+  <link rel="stylesheet" href="../css/cliente.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   
 </head>
@@ -49,7 +49,7 @@
 
         // Verificar si el cliente ha iniciado sesión
         if (isset($_SESSION['id_usuario'])) {
-          require '../conexion.php';
+          require '../php/conexion.php';
           $conexion = conectar();
 
           $id = $_SESSION['id_usuario'];
