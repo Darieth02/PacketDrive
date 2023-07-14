@@ -11,7 +11,7 @@
 
     $varsesion = $_SESSION['tipo_usuario'];
     if($varsesion==null || $varsesion=='' || $varsesion!='usuario'){
-        echo "no tienes autorizacion debes iniciar sesion primero ";?> <a href="../../../Register.php" class="btn btn-primary">Regresar </a><?php
+        echo "no tienes autorizacion debes iniciar sesion primero ";?> <a href="../index.php" class="btn btn-primary">Regresar </a><?php
         die();
     }
 
@@ -41,6 +41,8 @@
         <a href="#" class="active">Nuevo Envío</a>
         <a href="#">Ver Envíos</a>
         <a href="#">Historial de Envíos</a>
+        <a href="cerrarsesion.php" class="btn btn-primary" ><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesion</a>
+
       </div>
       <div class="col-sm-9 content">
       <div class="container mt-4">

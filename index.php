@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="css/register.css" />
 
+
   <!-- Bootstrap CSS v5.2.1 -->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -46,6 +47,7 @@
         <input name="emaill" id="emaill" type="email" placeholder="Email" />
         <input name="passwordl" id="passwordl" type="password" placeholder="Password" />
         <a href="/ForceDragon/php/recuperarcontraseña.php">Olvidaste tu contrasena?</a>
+
         <button id="iniciar">Sign In</button>
       </form>
     </div>

@@ -11,7 +11,7 @@
 
     $varsesion = $_SESSION['tipo_usuario'];
     if($varsesion==null || $varsesion=='' || $varsesion!='usuario'){
-        echo "no tienes autorizacion debes iniciar sesion primero ";?> <a href="../../../Register.php" class="btn btn-primary">Regresar </a><?php
+        echo "no tienes autorizacion debes iniciar sesion primero ";?> <a href="../index.php" class="btn btn-primary">Regresar </a><?php
         die();
     }
 
@@ -41,37 +41,52 @@
         <a href="newenvio.php">Nuevo Envío</a>
         <a href="#">Ver Envíos</a>
         <a href="#">Historial de Envíos</a>
+        <a href="cerrarsesion.php" class="btn btn-primary" ><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesion</a>
+
       </div>
       <div class="col-sm-9 content">
-        <h2>Información de la Cuenta</h2>
         <?php
-        session_start();
+              $id= $_SESSION['id_usuario'];
+              if($id==null || $id==''){
+                echo "No se puede mostrar informacion por que no existe";
+              }else{
+                $sqlUsuario="SELECT * FROM packetdrive.user WHERE id_usuario='$id'";
+                $usuario = $conexion->query($sqlUsuario);
+                $row_usuario=$usuario->fetch_assoc();
+                
+              }
 
-        // Verificar si el cliente ha iniciado sesión
-        if (isset($_SESSION['id_usuario'])) {
-          require '../php/conexion.php';
-          $conexion = conectar();
+            
 
-          $id = $_SESSION['id_usuario'];
-
-          $sql = "SELECT * FROM packetdrive.user WHERE id=$id LIMIT 1";
-          $resultado = $conexion->query($sql);
-          $rows = $resultado->num_rows;
-
-          if ($rows > 0) {
-            $cliente = $resultado->fetch_assoc();
-            ?>
-            <p>Nombre: <?php echo $cliente['nombre']; ?></p>
-            <p>Email: <?php echo $cliente['email']; ?></p>
-            <!-- Agrega aquí los demás campos que deseas mostrar -->
-            <?php
-          } else {
-            echo "No se encontró la información del cliente.";
-          }
-        } else {
-          echo "El cliente no ha iniciado sesión.";
-        }
+        
         ?>
+         <h2>Información de la Cuenta</h2>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $row_usuario['nombre']; ?>" readonly>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" class="form-control" id="apellido" name="apellido" value="<?php echo $row_usuario['apellidos']; ?>" readonly>
+            </div>
+            <div class="form-group">
+                <label for="edad">Edad:</label>
+                <input type="text" class="form-control" id="edad" name="edad" value="<?php echo $row_usuario['edad']; ?>" readonly>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input type="text" class="form-control" id="correo" name="correo" value="<?php echo $row_usuario['correo']; ?>" readonly>
+            </div>
+            <div class="form-group">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" class="form-control" id="contrasena" name="contrasena" value="<?php echo $row_usuario['contraseña']; ?>" readonly>
+            </div>
+        </form>
+
+
+        
+       
       </div>
     </div>
   </div>

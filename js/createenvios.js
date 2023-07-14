@@ -12,7 +12,6 @@ $(document).ready(function () {
             contentType: false,
             processData: false,
             success: function (response) {
-                location.href("../../config/clientes/newwnvio.php")
                 alert(response);
                 cargarProductos();
             },
