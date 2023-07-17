@@ -255,3 +255,33 @@ footer a {
 	color: #3c97bf;
 	text-decoration: none;
 }
+
+.requisito {
+	text-decoration: none;
+}
+
+.cumplido {
+	text-decoration: line-through;
+}
+
+.password-container {
+	position: relative;
+}
+
+#toggle-contraseña {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+#contraseña {
+	padding-right: 30px;
+	/* Ajusta el valor según sea necesario */
+}
+
+.fa-eye,
+.fa-eye-slash {
+	font-size: 18px;
+}

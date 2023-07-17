@@ -1,0 +1,21 @@
+ID de usuario: 7
+Contraseña recibida: Joseph123
+Resultado: La contraseña coincide
+ID de usuario: 7
+Contraseña recibida: Joseph123
+SQL:SELECT contraseña FROM packetdrive.user WHERE id_usuario = 7Resultado: La contraseña coincide
+ID de usuario: 7
+Contraseña recibida: Joseph123
+SQL: Joseph123Resultado: La contraseña coincide
+ID de usuario: 7
+Contraseña recibida: Joseph123
+SQL: Joseph123Resultado: La contraseña coincide
+ID de usuario: 7
+Contraseña recibida: Joseph123
+SQL: Joseph123Resultado: La contraseña coincide
+ID de usuario: 8
+Contraseña recibida: 
+SQL: Alexandro3Resultado: La contraseña NO coincide
+ID de usuario: 8
+Contraseña recibida: Alexandro3
+SQL: Alexandro3Resultado: La contraseña coincide

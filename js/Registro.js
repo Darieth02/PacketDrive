@@ -24,7 +24,7 @@ $('#registrar').click(function (event) {
 
 
 
-    expPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%?8])([A-Za-z\d$@$!%?&]|[^ ]){8,15}$/;
+    expPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,15}$/;
     ExpEmail = /^[\w.-]+@[a-zA-Z_-]+?(?:\.[a-zA-Z]{2,6})+$/;
 
     if (correo.length == 0 || edad == 0 || contraseña.length == 0 || nombre.length == 0 || apellidos.length == 0) {
@@ -110,4 +110,54 @@ $('#iniciar').click(function (event) {
 
 });
 
+$('#contraseña').click(function () {
+    $('#requisitos-contraseña').show();
+});
 
+$('#contraseña').on('input', function () {
+    var contraseña = $(this).val();
+
+    if (/[a-z]/.test(contraseña)) {
+        $('#requisito-1').addClass('cumplido');
+    } else {
+        $('#requisito-1').removeClass('cumplido');
+    }
+
+    if (/[A-Z]/.test(contraseña)) {
+        $('#requisito-2').addClass('cumplido');
+    } else {
+        $('#requisito-2').removeClass('cumplido');
+    }
+
+    if (/\d/.test(contraseña)) {
+        $('#requisito-3').addClass('cumplido');
+    } else {
+        $('#requisito-3').removeClass('cumplido');
+    }
+
+    if (contraseña.length >= 8 && contraseña.length <= 15) {
+        $('#requisito-4').addClass('cumplido');
+    } else {
+        $('#requisito-4').removeClass('cumplido');
+    }
+});
+
+
+$('#toggle-contraseña').click(function () {
+    var contraseñaInput = $('#contraseña');
+    var passwordlInput = $('#passwordl');
+
+    var icono = $(this).find('i');
+
+    if (contraseñaInput.attr('type') === 'password' || passwordlInput.attr('type') === 'password') {
+        contraseñaInput.attr('type', 'text');
+        passwordlInput.attr('type', 'text');
+
+        icono.removeClass('fa-eye-slash').addClass('fa-eye');
+    } else {
+        contraseñaInput.attr('type', 'password');
+        passwordlInput.attr('type', 'password');
+
+        icono.removeClass('fa-eye').addClass('fa-eye-slash');
+    }
+});

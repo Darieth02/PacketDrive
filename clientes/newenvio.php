@@ -99,6 +99,10 @@
             <label for="codigo_postal">Código Postal:</label>
             <input type="text" class="form-control" name="codigo_postal" id="codigo_postal" placeholder="Ingrese el código postal">
             </div>
+            <div class="form-group">
+            <label for="descripcion_dom">Descripción de domicilio:</label>
+            <input type="text" class="form-control" name="descripcion_dom" id="descripcion_dom" placeholder="Ingresa una descripcion del domicilio">
+            </div>
             
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>

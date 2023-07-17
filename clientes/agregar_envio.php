@@ -17,13 +17,14 @@ $municipio=$conexion->real_escape_string($_POST['municipio']);
 $estado=$conexion->real_escape_string($_POST['estado']);
 $pais=$conexion->real_escape_string($_POST['pais']);
 $cp=$conexion->real_escape_string($_POST['codigo_postal']);
+$descripcion_dom=$conexion->real_escape_string($_POST['descripcion_dom']);
 $letraInicial = chr(mt_rand(65, 90)); // Genera una letra aleatoria ASCII mayúscula (A-Z)
 $numeros = str_pad(mt_rand(0, 9999999), 7, '0', STR_PAD_LEFT); // Genera 7 dígitos numéricos
 $letrasFinales = chr(mt_rand(65, 90)) . chr(mt_rand(65, 90)); // Genera dos letras aleatorias ASCII mayúsculas (A-Z)
 
 $seguimiento = $letraInicial . $numeros . $letrasFinales;
 
-$sql="INSERT INTO packetdrive.envios (remitente, receptor, descripcion_envio, peso, precio, calle , numero , colonia, municipio, estado, pais, cp, seguimiento ) VALUES ('$remitente','$receptor','$descripcion','$peso','$precio','$calle',$numero,'$colonia','$municipio','$estado','$pais','$cp','$seguimiento')";
+$sql="INSERT INTO packetdrive.envios (remitente, receptor, descripcion_envio, peso, precio, calle , numero , colonia, municipio, estado, pais, cp, seguimiento, descripcion_dom ) VALUES ('$remitente','$receptor','$descripcion','$peso','$precio','$calle',$numero,'$colonia','$municipio','$estado','$pais','$cp','$seguimiento','$descripcion_dom')";
 if($conexion->query($sql)){
 
   //  $_SESSION['color'].="success";

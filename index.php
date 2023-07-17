@@ -35,7 +35,16 @@
         <input type="text" id="edad" placeholder="Edad" />
         <input type="email" id="correo" placeholder="Correo" />
         
-        <input type="password" id="contraseña" placeholder="Contraseña" />
+        <div class="password-container">
+          <input type="password" id="contraseña" placeholder="Contraseña" />
+          <a href="#" id="toggle-contraseña"><i class="fas fa-eye-slash"></i></a>
+        </div>       
+         <div id="requisitos-contraseña" style="display: none;">
+          <p id="requisito-1">La contraseña debe contener al menos una letra minúscula</p>
+          <p id="requisito-2">La contraseña debe contener al menos una letra mayúscula</p>
+          <p id="requisito-3">La contraseña debe contener al menos un dígito</p>
+          <p id="requisito-4">La contraseña debe tener entre 8 y 15 caracteres</p>
+        </div>
         <button id="registrar">Registrarte</button>
         
       </form>
@@ -45,7 +54,10 @@
         <h1>Iniciar Sesion</h1>
         
         <input name="emaill" id="emaill" type="email" placeholder="Email" />
-        <input name="passwordl" id="passwordl" type="password" placeholder="Password" />
+        <div class="password-container">
+          <input type="password" name="passwordl" id="passwordl" placeholder="Password" />
+          <a href="#" id="toggle-contraseña"><i class="fas fa-eye-slash"></i></a>
+        </div>
         <a href="/ForceDragon/php/recuperarcontraseña.php">Olvidaste tu contrasena?</a>
 
         <button id="iniciar">Sign In</button>
