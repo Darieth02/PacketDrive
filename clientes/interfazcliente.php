@@ -37,9 +37,9 @@
     <div class="row">
       <div class="col-sm-3 sidebar">
         <h2>Menú</h2>
-        <a href="#" class="active">Información</a>
+        <a href="interfazlciente.php" class="active">Información</a>
         <a href="newenvio.php">Nuevo Envío</a>
-        <a href="#">Ver Envíos</a>
+        <a href="verenvios.php">Ver Envíos</a>
         <a href="#">Historial de Envíos</a>
         <a href="cerrarsesion.php" class="btn btn-primary" ><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesion</a>
 

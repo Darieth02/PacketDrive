@@ -5,6 +5,8 @@ session_start();
 require '../php/conexion.php';
 $conexion=conectar();
 
+$id=$_SESSION['id_usuario'];
+
 $remitente=$conexion->real_escape_string($_POST['remitente']);
 $receptor=$conexion->real_escape_string($_POST['receptor']);
 $descripcion=$conexion->real_escape_string($_POST['descripcion']);
@@ -24,7 +26,7 @@ $letrasFinales = chr(mt_rand(65, 90)) . chr(mt_rand(65, 90)); // Genera dos letr
 
 $seguimiento = $letraInicial . $numeros . $letrasFinales;
 
-$sql="INSERT INTO packetdrive.envios (remitente, receptor, descripcion_envio, peso, precio, calle , numero , colonia, municipio, estado, pais, cp, seguimiento, descripcion_dom ) VALUES ('$remitente','$receptor','$descripcion','$peso','$precio','$calle',$numero,'$colonia','$municipio','$estado','$pais','$cp','$seguimiento','$descripcion_dom')";
+$sql="INSERT INTO packetdrive.envios (remitente, receptor, descripcion_envio, peso, precio, calle , numero , colonia, municipio, estado, pais, cp, seguimiento, descripcion_dom, id_usuario ) VALUES ('$remitente','$receptor','$descripcion','$peso','$precio','$calle',$numero,'$colonia','$municipio','$estado','$pais','$cp','$seguimiento','$descripcion_dom',$id)";
 if($conexion->query($sql)){
 
   //  $_SESSION['color'].="success";

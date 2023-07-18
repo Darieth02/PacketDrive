@@ -28,7 +28,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú Lateral</title>
-    <link rel="stylesheet" href="../css/cliente.css">
+  <link rel="stylesheet" href="../css/cliente.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   
 </head>
@@ -38,8 +38,8 @@
       <div class="col-sm-3 sidebar">
         <h2>Menú</h2>
         <a href="interfazcliente.php" >Información</a>
-        <a href="#" class="active">Nuevo Envío</a>
-        <a href="#">Ver Envíos</a>
+        <a href="newenvio.php" class="active">Nuevo Envío</a>
+        <a href="verenvios.php">Ver Envíos</a>
         <a href="#">Historial de Envíos</a>
         <a href="cerrarsesion.php" class="btn btn-primary" ><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesion</a>
 
