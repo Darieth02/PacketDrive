@@ -27,10 +27,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menú Lateral</title>
+  <title>Interfaz Cliente</title>
   <link rel="stylesheet" href="../css/cliente.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  
+    
+</head>
+<body>
+  <div class="container-fluid">
+    <div class
 </head>
 <body>
   <div class="container-fluid">
@@ -40,7 +44,6 @@
         <a href="interfazlciente.php" class="active">Información</a>
         <a href="newenvio.php">Nuevo Envío</a>
         <a href="verenvios.php">Ver Envíos</a>
-        <a href="#">Historial de Envíos</a>
         <a href="cerrarsesion.php" class="btn btn-primary" ><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesion</a>
 
       </div>
@@ -53,6 +56,9 @@
                 $sqlUsuario="SELECT * FROM packetdrive.user WHERE id_usuario='$id'";
                 $usuario = $conexion->query($sqlUsuario);
                 $row_usuario=$usuario->fetch_assoc();
+                
+                $nombreUsuario = $row_usuario['nombre']; // Obtener el nombre del usuario desde la base de datos
+                echo '<div class="welcome-message">Bienvenido: ' . $nombreUsuario . '</div>';
                 
               }
 

@@ -43,7 +43,6 @@
                 <a href="interfazcliente.php">Información</a>
                 <a href="newenvio.php">Nuevo Envío</a>
                 <a href="#" class="active">Ver Envíos</a>
-                <a href="#">Historial de Envíos</a>
                 <a href="cerrarsesion.php" class="btn btn-primary"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesion</a>
             </div>
             <div class="col-sm-9">

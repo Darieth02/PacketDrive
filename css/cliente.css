@@ -29,3 +29,48 @@ body {
     height: 300px;
     width: 100%;
 }
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container-fluid {
+    padding-top: 20px;
+}
+
+.sidebar {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-right: 1px solid #dee2e6;
+    min-height: 100vh;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    color: #343a40;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar a.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.content {
+    padding: 20px;
+}
+
+.welcome-message {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+}
