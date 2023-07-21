@@ -22,15 +22,3 @@ $(document).ready(function () {
     });
 });
 
-function cargarProductos() {
-    $.ajax({
-        url: "obtener_productos.php",
-        type: "GET",
-        success: function (response) {
-            $("#tabla-productos tbody").html(response);
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            console.log(textStatus, errorThrown);
-        }
-    });
-}

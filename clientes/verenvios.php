@@ -15,7 +15,7 @@
         die();
     }
     $id= $_SESSION['id_usuario'];
-    $sql = "SELECT id_envio, remitente , receptor, descripcion_envio, peso, precio, calle, numero, colonia, municipio, estado, pais, cp, seguimiento, descripcion_dom FROM envios WHERE id_usuario = '$id'";
+    $sql = "SELECT * FROM envios WHERE id_usuario = '$id'";
     $result = $conexion->query($sql);
 
 
@@ -49,7 +49,7 @@
             </div>
             <div class="col-sm-9">
                 <h2>Información de Envíos</h2>
-                <table class="table table-bordered">
+                <table class="table table-bordered table-striped">
                     <thead class="thead-light">
                         <tr>
                             <th>ID de envío</th>
@@ -67,6 +67,8 @@
                             <th>Código Postal</th>
                             <th>Número de seguimiento</th>
                             <th>Descripción de domicilio</th>
+                            <th>Fecha envio</th>
+                            <th>Estatus del envio</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -88,6 +90,8 @@
                             echo "<td>" . $row['cp'] . "</td>";
                             echo "<td>" . $row['seguimiento'] . "</td>";
                             echo "<td>" . $row['descripcion_dom'] . "</td>";
+                            echo "<td>" . $row['fecha_envio'] . "</td>";
+                            echo "<td>" . $row['estado_envio'] . "</td>";
                             echo "<td><a href='generar_guia.php?id_envio=" . $row['id_envio'] . "' class='btn btn-primary btn-sm'>Generar Guía</a></td>";
                             echo "</tr>";
                         }

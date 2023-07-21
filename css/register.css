@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
 * {
 	box-sizing: border-box;
@@ -10,7 +10,10 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Nunito', sans-serif;
+	/* Cambiamos la fuente a Nunito */
+	font-weight: 400;
+	/* Puedes ajustar el peso de la fuente (400 para normal, 700 para negrita) */
 	height: 100vh;
 	margin: -20px 0 50px;
 }
@@ -168,7 +171,6 @@ input {
 
 .overlay {
 	background-image: url("https://blog.envioclick.com/wp-content/uploads/2021/07/como-estan-operando-paqueterias-mexico-colombia.jpg");
-
 	background-size: cover;
 	background-position: 0 0;
 	color: #FFFFFF;
@@ -285,3 +287,5 @@ footer a {
 .fa-eye-slash {
 	font-size: 18px;
 }
+
+/* Resto del CSS... */

@@ -80,7 +80,7 @@
                 } ?>
          <h2>Información de la Cuenta</h2>
         <form>
-            <div class="form-group">
+            <div class="form-group"  >
                         <label for="id_usuario">ID:</label>
                         <input type="text" class="form-control" id="id_usuario" name="id_usuario" value="<?php echo $row_usuario['id_usuario']; ?>" readonly>
             </div>

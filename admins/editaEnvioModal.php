@@ -63,6 +63,14 @@
               <input type="text" class="form-control" name="codigo_postal" id="codigo_postal" placeholder="Ingrese el código postal">
             </div>
             <div class="form-group">
+              <label for="fecha">Fecha:</label>
+              <input type="text" class="form-control" name="fecha" id="fecha" placeholder="Ingrese la fecha">
+            </div>
+            <div class="form-group">
+              <label for="estatus">Estado:</label>
+              <input type="text" class="form-control" name="estatus" id="estatus" placeholder="Ingrese el estatus">
+            </div>
+            <div class="form-group">
               <label for="seguimiento">Seguimiento:</label>
               <input type="text" class="form-control" name="seguimiento" id="seguimiento"  readonly>
             </div>

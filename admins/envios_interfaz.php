@@ -78,6 +78,8 @@ $envios = $conexion->query($sqlEnvios);
                             <th>Código Postal</th>
                             <th>Número de seguimiento</th>
                             <th>Descripción de domicilio</th>
+                            <th>Fecha</th>
+                            <th>Estado</th>
                             <th>Usuario</th>
                             <th>Acciones</th>
                         </tr>
@@ -100,6 +102,8 @@ $envios = $conexion->query($sqlEnvios);
                                 <td><?php echo $row_envio['cp']; ?></td>
                                 <td><?php echo $row_envio['seguimiento']; ?></td>
                                 <td><?php echo $row_envio['descripcion_dom']; ?></td>
+                                <td><?php echo $row_envio['fecha_envio']; ?></td>
+                                <td><?php echo $row_envio['estado_envio']; ?></td>
                                 <td><?php echo $row_envio['nombre_usuario'] . ' ' . $row_envio['apellidos_usuario']; ?></td>
 
                                 
@@ -138,6 +142,8 @@ $envios = $conexion->query($sqlEnvios);
         editaEnvioModal.querySelector('.modal-body #estado').value=""
         editaEnvioModal.querySelector('.modal-body #pais').value=""
         editaEnvioModal.querySelector('.modal-body #codigo_postal').value=""
+        editaEnvioModal.querySelector('.modal-body #fecha').value=""
+        editaEnvioModal.querySelector('.modal-body #estatus').value=""
         editaEnvioModal.querySelector('.modal-body #seguimiento').value=""
         editaEnvioModal.querySelector('.modal-body #descripcion_dom').value=""
     })
@@ -159,6 +165,8 @@ $envios = $conexion->query($sqlEnvios);
         let inputEstado=editaEnvioModal.querySelector('.modal-body #estado')
         let inputPais=editaEnvioModal.querySelector('.modal-body #pais')
         let inputCodigo=editaEnvioModal.querySelector('.modal-body #codigo_postal')
+        let inputFecha=editaEnvioModal.querySelector('.modal-body #fecha')
+        let inputEstatus=editaEnvioModal.querySelector('.modal-body #estatus')
         let inputSeguimiento=editaEnvioModal.querySelector('.modal-body #seguimiento')
         let inputDescripcionDom=editaEnvioModal.querySelector('.modal-body #descripcion_dom')
 
@@ -183,7 +191,9 @@ $envios = $conexion->query($sqlEnvios);
             inputMunicipio.value= data.municipio
             inputEstado.value= data.estado
             inputPais.value= data.pais
-            inputCodigo.value= data.codigo
+            inputCodigo.value= data.cp
+            inputFecha.value= data.fecha_envio
+            inputEstatus.value= data.estado_envio
             inputSeguimiento.value= data.seguimiento
             inputDescripcionDom.value= data.descripcion_dom
         }).catch(err => console.log(err))

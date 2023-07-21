@@ -1,23 +1,23 @@
 <?php 
 
-require '../conexion.php';
+require '../php/conexion.php';
     $conexion=conectar();
 
 
     
-$id=$conexion->real_escape_string($_POST['id']);
+$id=$conexion->real_escape_string($_POST['id_usuario']);
 
-$sql="SELECT * FROM packetdrive.user WHERE id=$id LIMIT 1";
+$sql="SELECT * FROM packetdrive.user WHERE id_usuario=$id LIMIT 1";
 $resultado=$conexion->query($sql);
 $rows = $resultado->num_rows;
 
-$cliente =[];
+$usuario =[];
 
 if($rows>0){
-    $producto =$cliente->fetch_array();
+    $usuario =$resultado->fetch_array();
 }
 
-echo json_encode($cliente, JSON_UNESCAPED_UNICODE);
+echo json_encode($usuario, JSON_UNESCAPED_UNICODE);
 
 
 ?>

@@ -76,50 +76,39 @@ $('#iniciar').click(function (event) {
     let correo = document.getElementById('emaill');
     let contraseña = document.getElementById('passwordl');
 
-    if (correo.length == 0 || contraseña.length == 0) {
+    if (correo.value.length == 0 || contraseña.value.length == 0) {
         swal("Error", "No dejes espacios vacios", "error");
         return false;
     } else {
 
-        data();
+        let datos = new FormData();
+        datos.append("emaill", correo.value);
+        datos.append("passwordl", contraseña.value);
 
-        function data() {
-            let datos = new FormData();
-
-            datos.append("emaill", correo.value);
-            datos.append("passwordl", contraseña.value);
-
-
-            fetch('php/validar.php', {
-                method: 'POST',
-                body: datos
-            }).then(Response => Response.json())
-                .then(({ success, tipo }) => {
-                    if (success === 1) {
-
-                        if (tipo === 2) {
-                            swal("Correcto", "Admin ingresado", "success");
-                            location.href = 'admins/interfaz_admin.php';
-                        } else {
-                            swal("Correcto", "Usuario ingresado", "success");
-                            location.href = 'clientes/interfazcliente.php';
-                        }
-
+        fetch('php/validar.php', {
+            method: 'POST',
+            body: datos
+        }).then(response => response.json())
+            .then(({ success, tipo, message }) => {
+                if (success === 1) {
+                    if (tipo === 2) {
+                        swal("Correcto", "Admin ingresado", "success");
+                        location.href = 'admins/interfaz_admin.php';
                     } else {
-                        swal("Error..", "Email o contraseña no valido", "error");
+                        swal("Correcto", "Usuario ingresado", "success");
+                        location.href = 'clientes/interfazcliente.php';
                     }
-                });
-
-
-        }
+                } else {
+                    swal("Error", message, "error");
+                }
+            })
+            .catch(error => {
+                swal("Error", "Contraseña o correo no valida", "error");
+            });
     }
-
-
-
-
-
-
 });
+
+
 
 $('#contraseña').click(function () {
     $('#requisitos-contraseña').show();

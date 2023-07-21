@@ -47,6 +47,8 @@ $usuarios = $conexion->query($sqlUsuarios);
             </div>
             <div class="col-sm-9 content">
                 <h2>Usuarios Registrados</h2>
+                <input type="text" class="form-control" id="buscarUsuarios" placeholder="Buscar por nombre, id, correo">
+
                 <?php if(isset($_SESSION['msg']) && isset($_SESSION['color'])){?>
             <div class="alert alert-<?= $_SESSION['color'];?> alert-dismissible fade show" role="alert">
                 <?= $_SESSION['msg'];?>
@@ -58,7 +60,7 @@ $usuarios = $conexion->query($sqlUsuarios);
                 } ?>
                 <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#nuevoModal"><i class="fa-solid fa-circle-plus"></i> Nuevo Registro</a>
 
-                <table class="table table-bordered table-striped">
+                <table id="tablaUsuarios" class="table table-bordered table-striped">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -94,7 +96,8 @@ $usuarios = $conexion->query($sqlUsuarios);
     <?php include 'nuevoModal.php'; ?>
     <?php include 'editaModal.php'; ?>
     <?php include 'eliminaModal.php'; ?>
-                            
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            
     <script>
     let nuevoModal=document.getElementById('nuevoModal')
     let editaModal=document.getElementById('editaModal')
@@ -165,9 +168,49 @@ $usuarios = $conexion->query($sqlUsuarios);
         eliminaModal.querySelector('.modal-footer #id').value = id
 
     })
+    $(document).ready(function() {
+  // Función para filtrar la tabla
+  function filtrarTabla() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("buscarUsuarios"); // Cambiar el ID al del campo de búsqueda de usuarios
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tablaUsuarios"); // Cambiar el ID al de la tabla de usuarios
+    tr = table.getElementsByTagName("tr");
+
+    for (i = 0; i < tr.length; i++) {
+      tdID = tr[i].getElementsByTagName("td")[0];
+      tdNombre = tr[i].getElementsByTagName("td")[1];
+      tdCorreo = tr[i].getElementsByTagName("td")[4];
+
+      if (tdID || tdNombre || tdCorreo) {
+        txtID = tdID.textContent || tdID.innerText;
+        txtNombre = tdNombre.textContent || tdNombre.innerText;
+        txtCorreo = tdCorreo.textContent || tdCorreo.innerText;
+
+        if (
+          txtID.toUpperCase().indexOf(filter) > -1 ||
+          txtNombre.toUpperCase().indexOf(filter) > -1 ||
+          txtCorreo.toUpperCase().indexOf(filter) > -1
+        ) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+  // Llamamos a la función cuando se escribe en el campo de búsqueda
+  $("#buscarUsuarios").on("keyup", function() {
+    filtrarTabla();
+  });
+
+  // También podemos llamar a la función al cargar la página para que la tabla se filtre desde el inicio
+  filtrarTabla();
+});
+
 
 </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 </body>
 
