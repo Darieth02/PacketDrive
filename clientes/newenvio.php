@@ -28,8 +28,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario Envios</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.min.css">
   <link rel="stylesheet" href="../css/cliente.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     
 </head>
 <body>
@@ -44,6 +45,15 @@
       </div>
       <div class="col-sm-9 content">
         <div class="container-form">
+        <?php if(isset($_SESSION['msg']) && isset($_SESSION['color'])){?>
+            <div class="alert alert-<?= $_SESSION['color'];?> alert-dismissible fade show" role="alert">
+                <?= $_SESSION['msg'];?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php 
+                unset($_SESSION['color']);
+                unset($_SESSION['msg']);
+                } ?>
           <h2>Información de Persona</h2>
           <form action="agregar_envio.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
@@ -64,7 +74,7 @@
             </div>
             <div class="form-group">
               <label for="precio">Precio:</label>
-              <input type="text" class="form-control" name="precio" id="precio" placeholder="Ingrese el precio del envio">
+              <input type="text" class="form-control" name="precio" id="precio" placeholder="Ingrese el precio del envio" readonly>
             </div>
 
             <h2>Dirección</h2>
@@ -112,6 +122,38 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjd05ahoKca5GTvfYy4MSAQkGQ2lcmG_w&libraries=places&callback=initMap" async defer></script>  <script src="../js/getmapa.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+        $(document).ready(function() {
+            $('#pais').on('input', function() {
+                var paisIngresado = $(this).val();
+
+                // Realizar la petición para obtener el precio de envío por país
+                $.getJSON('../precios.json', function(data) {
+                    // Buscar el país ingresado en el JSON y obtener el precio de envío en dólares
+                    var precioEnvioUSD = null;
+                    for (var i = 0; i < data.length; i++) {
+                        if (data[i].pais.toLowerCase() === paisIngresado.toLowerCase()) {
+                            precioEnvioUSD = data[i].precio_envio;
+                            break;
+                        }
+                    }
+
+                    // Verificar si se encontró el precio en dólares para el país ingresado
+                    if (precioEnvioUSD !== null) {
+                        // Calcular el precio de envío en pesos mexicanos con el valor de conversión
+                        var factorConversion = 17.9;
+                        var precioEnvioMXN = precioEnvioUSD * factorConversion;
+
+                        // Actualizar el valor del input de precio con el precio en pesos mexicanos
+                        $('#precio').val(precioEnvioMXN.toFixed(2));
+                    } else {
+                        // Si el país no se encontró en el JSON, mostrar un mensaje de error en el input de precio
+                        $('#precio').val('País no encontrado');
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

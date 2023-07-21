@@ -29,13 +29,13 @@ $seguimiento = $letraInicial . $numeros . $letrasFinales;
 $sql="INSERT INTO packetdrive.envios (remitente, receptor, descripcion_envio, peso, precio, calle , numero , colonia, municipio, estado, pais, cp, seguimiento, descripcion_dom, id_usuario ) VALUES ('$remitente','$receptor','$descripcion','$peso','$precio','$calle',$numero,'$colonia','$municipio','$estado','$pais','$cp','$seguimiento','$descripcion_dom',$id)";
 if($conexion->query($sql)){
 
-  //  $_SESSION['color'].="success";
-    //$_SESSION['msg'].="Producto Guardado";
+  $_SESSION['color'].="success";
+    $_SESSION['msg'].="Producto Guardado";
 
     
 }else{
-    //$_SESSION['color'].="danger";
-    //$_SESSION['msg'].="Error al guardar imagen";
+    $_SESSION['color'].="danger";
+    $_SESSION['msg'].="Error al guardar imagen";
 }
 
 header('Location: newenvio.php');

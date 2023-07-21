@@ -28,8 +28,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interfaz Cliente</title>
+  
   <link rel="stylesheet" href="../css/cliente.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+
     
 </head>
 <body>
@@ -66,11 +69,20 @@
 
         
         ?>
+        <?php if(isset($_SESSION['msg']) && isset($_SESSION['color'])){?>
+            <div class="alert alert-<?= $_SESSION['color'];?> alert-dismissible fade show" role="alert">
+                <?= $_SESSION['msg'];?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php 
+                unset($_SESSION['color']);
+                unset($_SESSION['msg']);
+                } ?>
          <h2>Información de la Cuenta</h2>
         <form>
             <div class="form-group">
                         <label for="id_usuario">ID:</label>
-                        <input type="text" class="form-control" id="id_usuario" name="id_usuario" value="<?php echo $row_usuario['id_usuario']; ?>">
+                        <input type="text" class="form-control" id="id_usuario" name="id_usuario" value="<?php echo $row_usuario['id_usuario']; ?>" readonly>
             </div>
             <div class="form-group">
                 <label for="nombre">Nombre:</label>

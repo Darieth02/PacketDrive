@@ -1,0 +1,778 @@
+[
+  {
+    "pais": "Afganistán",
+    "precio_envio": 25.00
+  },
+  {
+    "pais": "Albania",
+    "precio_envio": 20.50
+  },
+  {
+    "pais": "Alemania",
+    "precio_envio": 18.75
+  },
+  {
+    "pais": "Andorra",
+    "precio_envio": 22.80
+  },
+  {
+    "pais": "Angola",
+    "precio_envio": 30.20
+  },
+  {
+    "pais": "Antigua y Barbuda",
+    "precio_envio": 26.40
+  },
+  {
+    "pais": "Arabia Saudita",
+    "precio_envio": 28.90
+  },
+  {
+    "pais": "Argelia",
+    "precio_envio": 24.30
+  },
+  {
+    "pais": "Argentina",
+    "precio_envio": 27.70
+  },
+  {
+    "pais": "Armenia",
+    "precio_envio": 21.60
+  },
+  {
+    "pais": "Australia",
+    "precio_envio": 30.50
+  },
+  {
+    "pais": "Austria",
+    "precio_envio": 19.80
+  },
+  {
+    "pais": "Azerbaiyán",
+    "precio_envio": 23.10
+  },
+  {
+    "pais": "Bahamas",
+    "precio_envio": 29.20
+  },
+  {
+    "pais": "Bangladés",
+    "precio_envio": 25.90
+  },
+  {
+    "pais": "Barbados",
+    "precio_envio": 28.00
+  },
+  {
+    "pais": "Baréin",
+    "precio_envio": 27.50
+  },
+  {
+    "pais": "Bélgica",
+    "precio_envio": 17.50
+  },
+  {
+    "pais": "Belice",
+    "precio_envio": 26.70
+  },
+  {
+    "pais": "Benín",
+    "precio_envio": 30.80
+  },
+  {
+    "pais": "Bielorrusia",
+    "precio_envio": 22.60
+  },
+  {
+    "pais": "Birmania",
+    "precio_envio": 29.90
+  },
+  {
+    "pais": "Bolivia",
+    "precio_envio": 24.50
+  },
+  {
+    "pais": "Bosnia y Herzegovina",
+    "precio_envio": 20.70
+  },
+  {
+    "pais": "Botsuana",
+    "precio_envio": 28.30
+  },
+  {
+    "pais": "Brasil",
+    "precio_envio": 26.10
+  },
+  {
+    "pais": "Brunéi",
+    "precio_envio": 31.10
+  },
+  {
+    "pais": "Bulgaria",
+    "precio_envio": 19.40
+  },
+  {
+    "pais": "Burkina Faso",
+    "precio_envio": 30.40
+  },
+  {
+    "pais": "Burundi",
+    "precio_envio": 31.80
+  },
+  {
+    "pais": "Bután",
+    "precio_envio": 27.80
+  },
+  {
+    "pais": "Cabo Verde",
+    "precio_envio": 25.60
+  },
+  {
+    "pais": "Camboya",
+    "precio_envio": 22.90
+  },
+  {
+    "pais": "Camerún",
+    "precio_envio": 29.70
+  },
+  {
+    "pais": "Canadá",
+    "precio_envio": 32.50
+  },
+  {
+    "pais": "Catar",
+    "precio_envio": 26.90
+  },
+  {
+    "pais": "Chad",
+    "precio_envio": 28.50
+  },
+  {
+    "pais": "Chile",
+    "precio_envio": 25.70
+  },
+  {
+    "pais": "China",
+    "precio_envio": 33.00
+  },
+  {
+    "pais": "Chipre",
+    "precio_envio": 24.40
+  },
+  {
+    "pais": "Ciudad del Vaticano",
+    "precio_envio": 18.30
+  },
+  {
+    "pais": "Colombia",
+    "precio_envio": 28.20
+  },
+  {
+    "pais": "Comoras",
+    "precio_envio": 22.70
+  },
+  {
+    "pais": "Corea del Norte",
+    "precio_envio": 30.30
+  },
+  {
+    "pais": "Corea del Sur",
+    "precio_envio": 31.50
+  },
+  {
+    "pais": "Costa de Marfil",
+    "precio_envio": 23.80
+  },
+  {
+    "pais": "Costa Rica",
+    "precio_envio": 27.40
+  },
+  {
+    "pais": "Croacia",
+    "precio_envio": 20.20
+  },
+  {
+    "pais": "Cuba",
+    "precio_envio": 24.60
+  },
+  {
+    "pais": "Dinamarca",
+    "precio_envio": 17.90
+  },
+  {
+    "pais": "Dominica",
+    "precio_envio": 25.10
+  },
+  {
+    "pais": "Ecuador",
+    "precio_envio": 26.60
+  },
+  {
+    "pais": "Egipto",
+    "precio_envio": 29.30
+  },
+  {
+    "pais": "El Salvador",
+    "precio_envio": 21.40
+  },
+  {
+    "pais": "Emiratos Árabes Unidos",
+    "precio_envio": 30.60
+  },
+  {
+    "pais": "Eritrea",
+    "precio_envio": 23.30
+  },
+  {
+    "pais": "Eslovaquia",
+    "precio_envio": 19.60
+  },
+  {
+    "pais": "Eslovenia",
+    "precio_envio": 20.80
+  },
+  {
+    "pais": "España",
+    "precio_envio": 22.00
+  },
+  {
+    "pais": "Estados Unidos",
+    "precio_envio": 35.00
+  },
+  {
+    "pais": "Estonia",
+    "precio_envio": 21.10
+  },
+  {
+    "pais": "Etiopía",
+    "precio_envio": 27.30
+  },
+  {
+    "pais": "Filipinas",
+    "precio_envio": 25.50
+  },
+  {
+    "pais": "Finlandia",
+    "precio_envio": 18.90
+  },
+  {
+    "pais": "Fiyi",
+    "precio_envio": 28.80
+  },
+  {
+    "pais": "Francia",
+    "precio_envio": 23.50
+  },
+  {
+    "pais": "Gabón",
+    "precio_envio": 29.80
+  },
+  {
+    "pais": "Gambia",
+    "precio_envio": 25.30
+  },
+  {
+    "pais": "Georgia",
+    "precio_envio": 26.20
+  },
+  {
+    "pais": "Ghana",
+    "precio_envio": 27.90
+  },
+  {
+    "pais": "Granada",
+    "precio_envio": 22.40
+  },
+  {
+    "pais": "Grecia",
+    "precio_envio": 19.20
+  },
+  {
+    "pais": "Guatemala",
+    "precio_envio": 24.70
+  },
+  {
+    "pais": "Guinea",
+    "precio_envio": 21.90
+  },
+  {
+    "pais": "Guinea-Bisáu",
+    "precio_envio": 23.60
+  },
+  {
+    "pais": "Guinea Ecuatorial",
+    "precio_envio": 25.20
+  },
+  {
+    "pais": "Guyana",
+    "precio_envio": 26.80
+  },
+  {
+    "pais": "Haití",
+    "precio_envio": 27.50
+  },
+  {
+    "pais": "Honduras",
+    "precio_envio": 20.30
+  },
+  {
+    "pais": "Hungría",
+    "precio_envio": 21.30
+  },
+  {
+    "pais": "India",
+    "precio_envio": 32.80
+  },
+  {
+    "pais": "Indonesia",
+    "precio_envio": 31.70
+  },
+  {
+    "pais": "Irak",
+    "precio_envio": 28.40
+  },
+  {
+    "pais": "Irán",
+    "precio_envio": 28.60
+  },
+  {
+    "pais": "Irlanda",
+    "precio_envio": 20.00
+  },
+  {
+    "pais": "Islandia",
+    "precio_envio": 18.40
+  },
+  {
+    "pais": "Islas Marshall",
+    "precio_envio": 30.70
+  },
+  {
+    "pais": "Islas Salomón",
+    "precio_envio": 24.90
+  },
+  {
+    "pais": "Israel",
+    "precio_envio": 26.00
+  },
+  {
+    "pais": "Italia",
+    "precio_envio": 22.50
+  },
+  {
+    "pais": "Jamaica",
+    "precio_envio": 21.80
+  },
+  {
+    "pais": "Japón",
+    "precio_envio": 32.90
+  },
+  {
+    "pais": "Jordania",
+    "precio_envio": 23.40
+  },
+  {
+    "pais": "Kazajistán",
+    "precio_envio": 29.60
+  },
+  {
+    "pais": "Kenia",
+    "precio_envio": 26.50
+  },
+  {
+    "pais": "Kirguistán",
+    "precio_envio": 26.30
+  },
+  {
+    "pais": "Kiribati",
+    "precio_envio": 25.40
+  },
+  {
+    "pais": "Kuwait",
+    "precio_envio": 27.20
+  },
+  {
+    "pais": "Laos",
+    "precio_envio": 29.40
+  },
+  {
+    "pais": "Lesoto",
+    "precio_envio": 28.70
+  },
+  {
+    "pais": "Letonia",
+    "precio_envio": 20.60
+  },
+  {
+    "pais": "Líbano",
+    "precio_envio": 23.90
+  },
+  {
+    "pais": "Liberia",
+    "precio_envio": 21.50
+  },
+  {
+    "pais": "Libia",
+    "precio_envio": 25.70
+  },
+  {
+    "pais": "Liechtenstein",
+    "precio_envio": 19.70
+  },
+  {
+    "pais": "Lituania",
+    "precio_envio": 21.70
+  },
+  {
+    "pais": "Luxemburgo",
+    "precio_envio": 18.20
+  },
+  {
+    "pais": "Macedonia del Norte",
+    "precio_envio": 19.00
+  },
+  {
+    "pais": "Madagascar",
+    "precio_envio": 24.20
+  },
+  {
+    "pais": "Malasia",
+    "precio_envio": 27.10
+  },
+  {
+    "pais": "Malaui",
+    "precio_envio": 25.80
+  },
+  {
+    "pais": "Maldivas",
+    "precio_envio": 26.50
+  },
+  {
+    "pais": "Malí",
+    "precio_envio": 23.20
+  },
+  {
+    "pais": "Malta",
+    "precio_envio": 22.30
+  },
+  {
+    "pais": "Marruecos",
+    "precio_envio": 24.90
+  },
+  {
+    "pais": "Mauricio",
+    "precio_envio": 25.60
+  },
+  {
+    "pais": "Mauritania",
+    "precio_envio": 24.80
+  },
+  {
+    "pais": "México",
+    "precio_envio": 32.20
+  },
+  {
+    "pais": "Micronesia",
+    "precio_envio": 28.30
+  },
+  {
+    "pais": "Moldavia",
+    "precio_envio": 22.10
+  },
+  {
+    "pais": "Mónaco",
+    "precio_envio": 18.80
+  },
+  {
+    "pais": "Mongolia",
+    "precio_envio": 27.50
+  },
+  {
+    "pais": "Montenegro",
+    "precio_envio": 19.30
+  },
+  {
+    "pais": "Mozambique",
+    "precio_envio": 26.90
+  },
+  {
+    "pais": "Namibia",
+    "precio_envio": 28.60
+  },
+  {
+    "pais": "Nauru",
+    "precio_envio": 30.20
+  },
+  {
+    "pais": "Nepal",
+    "precio_envio": 24.30
+  },
+  {
+    "pais": "Nicaragua",
+    "precio_envio": 21.10
+  },
+  {
+    "pais": "Níger",
+    "precio_envio": 27.60
+  },
+  {
+    "pais": "Nigeria",
+    "precio_envio": 25.40
+  },
+  {
+    "pais": "Noruega",
+    "precio_envio": 17.40
+  },
+  {
+    "pais": "Nueva Zelanda",
+    "precio_envio": 30.70
+  },
+  {
+    "pais": "Omán",
+    "precio_envio": 29.70
+  },
+  {
+    "pais": "Países Bajos",
+    "precio_envio": 18.50
+  },
+  {
+    "pais": "Pakistán",
+    "precio_envio": 26.40
+  },
+  {
+    "pais": "Palaos",
+    "precio_envio": 28.40
+  },
+  {
+    "pais": "Panamá",
+    "precio_envio": 25.80
+  },
+  {
+    "pais": "Papúa Nueva Guinea",
+    "precio_envio": 30.30
+  },
+  {
+    "pais": "Paraguay",
+    "precio_envio": 23.60
+  },
+  {
+    "pais": "Perú",
+    "precio_envio": 26.20
+  },
+  {
+    "pais": "Polonia",
+    "precio_envio": 19.90
+  },
+  {
+    "pais": "Portugal",
+    "precio_envio": 21.20
+  },
+  {
+    "pais": "Reino Unido",
+    "precio_envio": 22.10
+  },
+  {
+    "pais": "República Centroafricana",
+    "precio_envio": 26.80
+  },
+  {
+    "pais": "República Checa",
+    "precio_envio": 20.30
+  },
+  {
+    "pais": "República del Congo",
+    "precio_envio": 25.30
+  },
+  {
+    "pais": "República Democrática del Congo",
+    "precio_envio": 27.30
+  },
+  {
+    "pais": "República Dominicana",
+    "precio_envio": 23.50
+  },
+  {
+    "pais": "Ruanda",
+    "precio_envio": 24.50
+  },
+  {
+    "pais": "Rumania",
+    "precio_envio": 20.60
+  },
+  {
+    "pais": "Rusia",
+    "precio_envio": 29.50
+  },
+  {
+    "pais": "Samoa",
+    "precio_envio": 26.70
+  },
+  {
+    "pais": "San Cristóbal y Nieves",
+    "precio_envio": 23.10
+  },
+  {
+    "pais": "San Marino",
+    "precio_envio": 18.60
+  },
+  {
+    "pais": "San Vicente y las Granadinas",
+    "precio_envio": 22.20
+  },
+  {
+    "pais": "Santa Lucía",
+    "precio_envio": 21.70
+  },
+  {
+    "pais": "Santo Tomé y Príncipe",
+    "precio_envio": 27.90
+  },
+  {
+    "pais": "Senegal",
+    "precio_envio": 24.60
+  },
+  {
+    "pais": "Serbia",
+    "precio_envio": 19.70
+  },
+  {
+    "pais": "Seychelles",
+    "precio_envio": 26.40
+  },
+  {
+    "pais": "Sierra Leona",
+    "precio_envio": 23.30
+  },
+  {
+    "pais": "Singapur",
+    "precio_envio": 30.00
+  },
+  {
+    "pais": "Siria",
+    "precio_envio": 27.10
+  },
+  {
+    "pais": "Somalia",
+    "precio_envio": 28.70
+  },
+  {
+    "pais": "Sri Lanka",
+    "precio_envio": 24.40
+  },
+  {
+    "pais": "Suazilandia",
+    "precio_envio": 29.10
+  },
+  {
+    "pais": "Sudáfrica",
+    "precio_envio": 28.20
+  },
+  {
+    "pais": "Sudán",
+    "precio_envio": 26.60
+  },
+  {
+    "pais": "Sudán del Sur",
+    "precio_envio": 27.00
+  },
+  {
+    "pais": "Suecia",
+    "precio_envio": 18.10
+  },
+  {
+    "pais": "Suiza",
+    "precio_envio": 19.30
+  },
+  {
+    "pais": "Surinam",
+    "precio_envio": 26.00
+  },
+  {
+    "pais": "Tailandia",
+    "precio_envio": 31.10
+  },
+  {
+    "pais": "Tanzania",
+    "precio_envio": 25.50
+  },
+  {
+    "pais": "Tayikistán",
+    "precio_envio": 26.70
+  },
+  {
+    "pais": "Timor Oriental",
+    "precio_envio": 27.50
+  },
+  {
+    "pais": "Togo",
+    "precio_envio": 22.80
+  },
+  {
+    "pais": "Tonga",
+    "precio_envio": 28.10
+  },
+  {
+    "pais": "Trinidad y Tobago",
+    "precio_envio": 23.40
+  },
+  {
+    "pais": "Túnez",
+    "precio_envio": 24.10
+  },
+  {
+    "pais": "Turkmenistán",
+    "precio_envio": 28.90
+  },
+  {
+    "pais": "Turquía",
+    "precio_envio": 20.80
+  },
+  {
+    "pais": "Tuvalu",
+    "precio_envio": 30.60
+  },
+  {
+    "pais": "Ucrania",
+    "precio_envio": 23.80
+  },
+  {
+    "pais": "Uganda",
+    "precio_envio": 25.20
+  },
+  {
+    "pais": "Uruguay",
+    "precio_envio": 22.50
+  },
+  {
+    "pais": "Uzbekistán",
+    "precio_envio": 25.90
+  },
+  {
+    "pais": "Vanuatu",
+    "precio_envio": 29.30
+  },
+  {
+    "pais": "Venezuela",
+    "precio_envio": 27.60
+  },
+  {
+    "pais": "Vietnam",
+    "precio_envio": 28.80
+  },
+  {
+    "pais": "Yemen",
+    "precio_envio": 26.10
+  },
+  {
+    "pais": "Yibuti",
+    "precio_envio": 24.70
+  },
+  {
+    "pais": "Zambia",
+    "precio_envio": 29.10
+  },
+  {
+    "pais": "Zimbabue",
+    "precio_envio": 30.90
+  }
+]

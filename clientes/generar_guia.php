@@ -2,6 +2,7 @@
 require '../php/conexion.php';
 require '../fpdf/fpdf.php';
 require '../phpqrcode/qrlib.php';
+session_start();
 
 $conexion = conectar();
 
@@ -103,6 +104,10 @@ if (isset($_GET['id_envio'])) {
 }
 
 // Si el ID de envío no es válido o no se encuentra, redirigir a la página de verenvios.php
+$_SESSION['color']="success";
+
+$_SESSION['msg'] = "Guia Generada correctamente.";
+
 header("Location: verenvios.php");
 exit();
 ?>

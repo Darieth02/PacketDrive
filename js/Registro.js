@@ -76,33 +76,44 @@ $('#iniciar').click(function (event) {
     let correo = document.getElementById('emaill');
     let contraseña = document.getElementById('passwordl');
 
-    data();
+    if (correo.length == 0 || contraseña.length == 0) {
+        swal("Error", "No dejes espacios vacios", "error");
+        return false;
+    } else {
 
-    function data() {
-        let datos = new FormData();
+        data();
 
-        datos.append("emaill", correo.value);
-        datos.append("passwordl", contraseña.value);
-        fetch('php/validar.php', {
-            method: 'POST',
-            body: datos
-        }).then(Response => Response.json())
-            .then(({ success, tipo }) => {
-                if (success === 1) {
+        function data() {
+            let datos = new FormData();
 
-                    if (tipo === 2) {
-                        swal("Correcto", "Admin ingresado", "success");
-                        //location.href = '/ForceDragon/app/config/productos/producto.php';
+            datos.append("emaill", correo.value);
+            datos.append("passwordl", contraseña.value);
+
+
+            fetch('php/validar.php', {
+                method: 'POST',
+                body: datos
+            }).then(Response => Response.json())
+                .then(({ success, tipo }) => {
+                    if (success === 1) {
+
+                        if (tipo === 2) {
+                            swal("Correcto", "Admin ingresado", "success");
+                            location.href = 'admins/interfaz_admin.php';
+                        } else {
+                            swal("Correcto", "Usuario ingresado", "success");
+                            location.href = 'clientes/interfazcliente.php';
+                        }
+
                     } else {
-                        swal("Correcto", "Usuario ingresado", "success");
-                        location.href = 'clientes/interfazcliente.php';
+                        swal("Error..", "Email o contraseña no valido", "error");
                     }
+                });
 
-                } else {
-                    swal("Error..", "Email o contraseña no valido", "error");
-                }
-            });
+
+        }
     }
+
 
 
 

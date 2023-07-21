@@ -16,7 +16,9 @@ if ($conexion->query($sql)) {
     exit;
 } else {
     // Error al eliminar la cuenta del cliente, redirige a la página de interfaz del cliente con un mensaje de error
-    $_SESSION['error_msg'] = "Error al eliminar la cuenta. Inténtalo nuevamente.";
+    $_SESSION['color']="danger";
+
+    $_SESSION['msg'] = "Error al eliminar la cuenta. Inténtalo nuevamente.";
     header("Location: interfazcliente.php");
     exit;
 }
