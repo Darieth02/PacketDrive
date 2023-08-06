@@ -16,7 +16,7 @@ if ($varsesion == null || $varsesion == '' || $varsesion != 'admin') {
 }
 
 // Obtener todos los usuarios (excepto administradores)
-$sqlUsuarios = "SELECT * FROM packetdrive.user WHERE tipo_usuario != 'admin'";
+$sqlUsuarios = "SELECT * FROM user WHERE tipo_usuario != 'admin'";
 $usuarios = $conexion->query($sqlUsuarios);
 ?>
 

@@ -101,9 +101,6 @@ $('#iniciar').click(function (event) {
                 } else {
                     swal("Error", message, "error");
                 }
-            })
-            .catch(error => {
-                swal("Error", "Contraseña o correo no valida", "error");
             });
     }
 });

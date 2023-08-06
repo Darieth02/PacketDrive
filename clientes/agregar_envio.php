@@ -26,7 +26,7 @@ $letrasFinales = chr(mt_rand(65, 90)) . chr(mt_rand(65, 90)); // Genera dos letr
 
 $seguimiento = $letraInicial . $numeros . $letrasFinales;
 
-$sql="INSERT INTO packetdrive.envios (remitente, receptor, descripcion_envio, peso, precio, calle , numero , colonia, municipio, estado, pais, cp, seguimiento, descripcion_dom,fecha_envio,estado_envio, id_usuario ) VALUES ('$remitente','$receptor','$descripcion','$peso','$precio','$calle',$numero,'$colonia','$municipio','$estado','$pais','$cp','$seguimiento','$descripcion_dom',CURDATE(),'Pendiente',$id)";
+$sql="INSERT INTO envios (remitente, receptor, descripcion_envio, peso, precio, calle , numero , colonia, municipio, estado, pais, cp, seguimiento, descripcion_dom,fecha_envio,estado_envio, id_usuario ) VALUES ('$remitente','$receptor','$descripcion','$peso','$precio','$calle',$numero,'$colonia','$municipio','$estado','$pais','$cp','$seguimiento','$descripcion_dom',CURDATE(),'Pendiente',$id)";
 if($conexion->query($sql)){
 
   $_SESSION['color'].="success";

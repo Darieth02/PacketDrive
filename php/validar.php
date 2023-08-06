@@ -9,14 +9,14 @@ if (isset($_POST['emaill']) && !empty($_POST['emaill']) && isset($_POST['passwor
     $pass = $_POST['passwordl'];
     session_start();
 
-    $query_tipo = "SELECT tipo_usuario FROM packetdrive.user WHERE correo='$correo' AND contraseña='$pass'";
+    $query_tipo = "SELECT tipo_usuario FROM user WHERE correo='$correo' AND contraseña='$pass'";
     $result_tipo = mysqli_query($conexion, $query_tipo);
     $row = mysqli_fetch_assoc($result_tipo);
     $tipo = $row['tipo_usuario'];
 
     $_SESSION['tipo_usuario'] = $tipo;
 
-    $query = "SELECT * FROM packetdrive.user WHERE correo ='$correo' AND contraseña='$pass'";
+    $query = "SELECT * FROM user WHERE correo ='$correo' AND contraseña='$pass'";
     $result = mysqli_query($conexion, $query);
     $row_u = mysqli_fetch_assoc($result);
 

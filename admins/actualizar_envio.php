@@ -24,7 +24,7 @@ $seguimiento=$conexion->real_escape_string($_POST['seguimiento']);
 $descripciondom=$conexion->real_escape_string($_POST['descripcion_dom']);
 
 
-$sql = "UPDATE packetdrive.envios SET remitente='$remitente', receptor='$receptor', descripcion_envio='$descripcion', peso='$peso', precio='$precio', calle='$calle', numero='$numero', colonia='$colonia', municipio='$municipio', estado='$estado', pais='$pais', cp='$codigo', descripcion_dom='$descripciondom',fecha_envio='$fecha',estado_envio='$estatus' WHERE id_envio=$id";
+$sql = "UPDATE envios SET remitente='$remitente', receptor='$receptor', descripcion_envio='$descripcion', peso='$peso', precio='$precio', calle='$calle', numero='$numero', colonia='$colonia', municipio='$municipio', estado='$estado', pais='$pais', cp='$codigo', descripcion_dom='$descripciondom',fecha_envio='$fecha',estado_envio='$estatus' WHERE id_envio=$id";
 if($conexion->query($sql)){
     $_SESSION['color'].="success";
     $_SESSION['msg'].="Envio Actualizado";

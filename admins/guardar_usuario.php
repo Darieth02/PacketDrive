@@ -12,7 +12,7 @@ $correo=$conexion->real_escape_string($_POST['correo']);
 $contraseña=$conexion->real_escape_string($_POST['contraseña']);
 $tipo=$conexion->real_escape_string($_POST['tipo_usuario']);
 
-$sql="INSERT INTO packetdrive.user (nombre,apellidos,edad,correo,contraseña,tipo_usuario) VALUES ('$nombre','$apellido',$edad,'$correo','$contraseña','$tipo')";
+$sql="INSERT INTO user (nombre,apellidos,edad,correo,contraseña,tipo_usuario) VALUES ('$nombre','$apellido',$edad,'$correo','$contraseña','$tipo')";
 if($conexion->query($sql)){
     $id=$conexion->insert_id;
 

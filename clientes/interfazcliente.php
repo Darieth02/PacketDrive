@@ -56,7 +56,7 @@
               if($id==null || $id==''){
                 echo "No se puede mostrar informacion por que no existe";
               }else{
-                $sqlUsuario="SELECT * FROM packetdrive.user WHERE id_usuario='$id'";
+                $sqlUsuario="SELECT * FROM user WHERE id_usuario='$id'";
                 $usuario = $conexion->query($sqlUsuario);
                 $row_usuario=$usuario->fetch_assoc();
                 

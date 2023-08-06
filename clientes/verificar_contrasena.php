@@ -13,7 +13,7 @@ $contenido .= "Contraseña recibida: " . $contrasena . "\n";
 
 
 // Obtener la contraseña almacenada en la base de datos
-$sql = "SELECT contraseña FROM packetdrive.user WHERE id_usuario = $id";
+$sql = "SELECT contraseña FROM user WHERE id_usuario = $id";
 $resultado = $conexion->query($sql);
 
 

@@ -8,7 +8,7 @@ $conexion=conectar();
 $id=$conexion->real_escape_string($_POST['id']);
 
 
-$sql="DELETE FROM packetdrive.envios WHERE id_envio=$id ";
+$sql="DELETE FROM envios WHERE id_envio=$id ";
 if($conexion->query($sql)){
     $_SESSION['color']="success";
     $_SESSION['msg']="Envio Eliminado";

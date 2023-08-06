@@ -16,7 +16,7 @@ if ($varsesion == null || $varsesion == '' || $varsesion != 'admin') {
 }
 
 // Obtener todos los usuarios (excepto administradores)
-$sqlEnvios = "SELECT e.*, u.nombre AS nombre_usuario, u.apellidos AS apellidos_usuario FROM packetdrive.envios AS e INNER JOIN user AS u ON e.id_usuario = u.id_usuario";
+$sqlEnvios = "SELECT e.*, u.nombre AS nombre_usuario, u.apellidos AS apellidos_usuario FROM envios AS e INNER JOIN user AS u ON e.id_usuario = u.id_usuario";
 $envios = $conexion->query($sqlEnvios);
 ?>
 

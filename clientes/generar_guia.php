@@ -11,7 +11,7 @@ if (isset($_GET['id_envio'])) {
     $id_envio = $_GET['id_envio'];
 
     // Consulta SQL para obtener los datos del envío específico
-    $sql = "SELECT * FROM packetdrive.envios WHERE id_envio = '$id_envio'";
+    $sql = "SELECT * FROM envios WHERE id_envio = '$id_envio'";
     $result = $conexion->query($sql);
 
     if ($result->num_rows > 0) {

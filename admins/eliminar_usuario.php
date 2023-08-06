@@ -8,7 +8,7 @@ $conexion=conectar();
 $id=$conexion->real_escape_string($_POST['id']);
 
 
-$sql="DELETE FROM packetdrive.user WHERE id_usuario=$id ";
+$sql="DELETE FROM user WHERE id_usuario=$id ";
 if($conexion->query($sql)){
     $_SESSION['color']="success";
     $_SESSION['msg']="Usuario Eliminado";

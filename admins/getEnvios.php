@@ -7,7 +7,7 @@ require '../php/conexion.php';
     
 $id=$conexion->real_escape_string($_POST['id_envio']);
 
-$sql="SELECT * FROM packetdrive.envios WHERE id_envio=$id LIMIT 1";
+$sql="SELECT * FROM envios WHERE id_envio=$id LIMIT 1";
 $resultado=$conexion->query($sql);
 $rows = $resultado->num_rows;
 

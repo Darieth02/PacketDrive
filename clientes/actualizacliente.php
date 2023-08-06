@@ -12,7 +12,7 @@ $edad=$conexion->real_escape_string($_POST['modal_edad']);
 $correo=$conexion->real_escape_string($_POST['modal_correo']);
 $contraseña=$conexion->real_escape_string($_POST['modal_contrasena']);
 
-$sql="UPDATE packetdrive.user SET nombre='$nombre',apellidos='$apellido', edad='$edad',correo='$correo',contraseña='$contraseña'  WHERE id_usuario=$id ";
+$sql="UPDATE user SET nombre='$nombre',apellidos='$apellido', edad='$edad',correo='$correo',contraseña='$contraseña'  WHERE id_usuario=$id ";
 if($conexion->query($sql)){
     $_SESSION['color'].="success";
     $_SESSION['msg'].="Producto Actualizado";
