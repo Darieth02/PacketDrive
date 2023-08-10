@@ -35,18 +35,85 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="../css/cliente.css">
-    
+    <style>
+    /* Agrega aquí tu CSS personalizado */
+    /* Reset CSS */
+    body,
+    h1,
+    h2,
+    h3,
+    p,
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Header */
+    .header {
+        background-color: #fc0;
+        color: #333;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+        max-width: 60px;
+        margin-right: 1rem;
+    }
+
+    .main-menu ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .main-menu a {
+        text-decoration: none;
+        color: #333;
+        display: flex;
+        align-items: center;
+    }
+
+    .main-menu a:hover {
+        color: white;
+    }
+
+    /* Container */
+    .container-fluid {
+        padding: 2rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        background-color: #f3f3f3;
+        padding: 1rem;
+    }
+
+    /* Content */
+    .content {
+        padding: 1rem;
+    }
+  </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-3 sidebar">
-                <h2>Menú</h2>
-                <a href="interfazcliente.php">Información</a>
-                <a href="newenvio.php">Nuevo Envío</a>
-                <a href="#" class="active">Ver Envíos</a>
-                <a href="cerrarsesion.php" class="btn btn-primary"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesion</a>
-            </div>
+      <header class="header">
+        <div class="logo">
+          <h1>PacketDrive</h1>
+          <small>La velocidad que impulsa tu vida</small>
+        </div>
+        <nav class="main-menu" id="main-menu">
+          <ul>
+          <li><a href="interfazlciente.php"><i class="fas fa-user"></i> Información</a></li>
+            <li><a href="newenvio.php"><i class="fas fa-plus-circle"></i> Nuevo Envío</a></li>
+            <li><a href="verenvios.php"><i class="fas fa-list"></i> Ver Envíos</a></li>
+            <li><a href="cerrarsesion.php""><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a></li>
+          </ul>
+        </nav>
+      </header>
             <div class="col-sm-9">
                 <h2>Información de Envíos</h2>
                 <table class="table table-bordered table-striped">
@@ -99,7 +166,6 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-    </div>
+        
 </body>
 </html>

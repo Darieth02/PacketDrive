@@ -4,10 +4,11 @@ $conexion = conectar();
 
 $response = array();
 
-if (isset($_POST['emaill']) && !empty($_POST['emaill']) && isset($_POST['passwordl']) && !empty($_POST['passwordl'])) {
-    $correo = $_POST['emaill'];
-    $pass = $_POST['passwordl'];
+if (isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['password']) && !empty($_POST['password'])) {
+    $correo = $_POST['email'];
+    $pass = $_POST['password'];
     session_start();
+
 
     $query_tipo = "SELECT tipo_usuario FROM user WHERE correo='$correo' AND contraseña='$pass'";
     $result_tipo = mysqli_query($conexion, $query_tipo);
@@ -20,8 +21,12 @@ if (isset($_POST['emaill']) && !empty($_POST['emaill']) && isset($_POST['passwor
     $result = mysqli_query($conexion, $query);
     $row_u = mysqli_fetch_assoc($result);
 
+
+
+
     if (mysqli_num_rows($result) > 0) {
         $id = $row_u['id_usuario'];
+
         $_SESSION['id_usuario'] = $id;
 
         if ($tipo == "admin") {
@@ -35,9 +40,6 @@ if (isset($_POST['emaill']) && !empty($_POST['emaill']) && isset($_POST['passwor
         $response['success'] = 3;
         $response['message'] = "Email o contraseña incorrectos";
     }
-} else {
-    $response['success'] = 0;
-    $response['message'] = "Por favor, completa todos los campos";
 }
 
 echo json_encode($response);
